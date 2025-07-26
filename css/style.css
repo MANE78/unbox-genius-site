@@ -1,151 +1,143 @@
-/* --- General Body & Fonts --- */
+/* --- Google Fonts & Root Variables --- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Lato:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #FD7E14;
+    --secondary-color: #FFC107;
+    --light-color: #FFFFFF;
+    --dark-color: #121212;
+    --text-light: #F8F9FA;
+    --text-dark: #212529;
+    --grey-color: #F8F9FA;
+    --border-color: #e9ecef;
+    --transition-speed: 0.3s;
+}
+
+/* --- Dark Mode Variables --- */
+body.dark-mode {
+    --light-color: #1e1e1e;
+    --dark-color: #FFFFFF;
+    --text-light: #121212;
+    --text-dark: #F8F9FA;
+    --grey-color: #121212;
+    --border-color: #333333;
+}
+
+/* --- General Body & Smooth Scrolling --- */
+html { scroll-behavior: smooth; }
 body {
     font-family: 'Lato', sans-serif;
     line-height: 1.8;
     margin: 0;
     padding: 0;
-    background-color: #F8F9FA;
-    color: #212529;
+    background-color: var(--grey-color);
+    color: var(--text-dark);
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
 }
 
 /* --- Reusable Container --- */
-.container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 25px;
-    background-color: #FFFFFF;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
+.container { max-width: 800px; margin: 40px auto; padding: 25px; }
 
-/* --- Header & Navigation --- */
-.header {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #FFFFFF;
-    border-bottom: 1px solid #e9ecef;
+/* --- Header, Navbar (Upgraded) --- */
+.main-header {
+    background-color: var(--light-color);
+    position: sticky; top: 0; z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: background-color var(--transition-speed) ease;
 }
-
-.header h1 {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    font-size: 2.5em;
-    color: #212529;
+.header-content {
+    display: flex; justify-content: space-between; align-items: center;
+    max-width: 1200px; margin: 0 auto; padding: 10px 20px;
 }
-
-.header a {
-    text-decoration: none;
+.brand-logo a { text-decoration: none; }
+.brand-logo h1 {
+    font-family: 'Montserrat', sans-serif; font-weight: 900;
+    font-size: 2em; margin: 0; color: var(--text-dark);
 }
-
-.navbar {
-    display: flex;
-    justify-content: center;
-    background-color: #FFFFFF;
-    padding: 0;
-    margin: 0;
-}
-
+.navbar { display: flex; align-items: center; gap: 15px; }
 .navbar a {
-    color: #495057;
-    padding: 15px 20px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.2s ease-in-out;
+    color: #495057; padding: 10px 15px; text-decoration: none;
+    font-weight: bold; font-family: 'Montserrat', sans-serif;
+    transition: color var(--transition-speed) ease;
+}
+body.dark-mode .navbar a { color: #adb5bd; }
+.navbar a:hover { color: var(--primary-color); }
+
+#theme-toggler {
+    background: none; border: none; font-size: 1.5em; cursor: pointer;
+    padding: 0 10px; color: var(--text-dark);
 }
 
-.navbar a:hover {
-    color: #FD7E14;
+/* --- Hero Section (New!) --- */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://ae01.alicdn.com/kf/Sb42736f2d0644b2a8d54cf58b75a4f64s.jpg_640x640.jpg) no-repeat center center;
+    background-size: cover; color: var(--light-color);
+    text-align: center; padding: 80px 20px;
 }
-
-/* --- Homepage Post Cards --- */
-.post-grid {
-    display: grid;
-    gap: 25px;
+.hero h2 {
+    font-family: 'Montserrat', sans-serif; font-size: 2.8em;
+    margin-top: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
+.hero p { font-size: 1.2em; max-width: 600px; margin: 15px auto 25px; }
+.hero-btn {
+    padding: 12px 25px; background-color: var(--primary-color); color: #fff;
+    text-decoration: none; border-radius: 50px; font-weight: bold;
+    transition: transform var(--transition-speed) ease, background-color var(--transition-speed) ease;
+}
+.hero-btn:hover { transform: scale(1.05); background-color: #d96d11; }
 
+/* --- Post Card (Upgraded with Animation!) --- */
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.post-grid { display: grid; gap: 30px; }
 .post-card {
-    background: #FFFFFF;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    background: var(--light-color); border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease, background-color var(--transition-speed) ease;
+    animation: fadeIn 0.5s ease-out forwards;
 }
+/* Other post-card styles remain the same... */
 
-.post-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-}
-
-.post-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.post-card-content {
-    padding: 20px;
-}
-
-.post-card h2 {
-    font-family: 'Montserrat', sans-serif;
-    margin-top: 0;
-}
-
-.post-card a {
-    text-decoration: none;
-    color: #343A40;
-}
-
-.read-more-btn {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 8px 15px;
-    background-color: #FD7E14;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: bold;
-}
-
-/* --- Article & CTA Button Styles --- */
-.article-title {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.2em;
-    color: #343A40;
-    line-height: 1.3;
-}
-
-.product-image-container img {
-    max-width: 100%;
-    border-radius: 8px;
-}
-
-.call-to-action {
-    display: block;
-    width: fit-content;
-    margin: 35px auto;
-    padding: 15px 30px;
-    background: linear-gradient(90deg, #FD7E14, #FFC107);
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
-    border-radius: 50px;
-    text-align: center;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(253, 126, 20, 0.4);
-}
-
-.call-to-action:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(253, 126, 20, 0.5);
-}
-
-/* --- Footer --- */
+/* --- Footer (Upgraded!) --- */
 .footer {
-    text-align: center;
-    margin-top: 40px;
-    padding: 20px;
-    color: #6C757D;
-    font-size: 0.9em;
+    text-align: center; margin-top: 40px; padding: 40px 20px;
+    background-color: var(--dark-color);
+    color: rgba(255, 255, 255, 0.7);
+    transition: background-color var(--transition-speed) ease;
 }
+body.dark-mode .footer { background-color: #1c1c1c; }
+.social-icons a {
+    color: rgba(255, 255, 255, 0.7); font-size: 1.5em;
+    margin: 0 10px; text-decoration: none;
+    transition: color var(--transition-speed) ease;
+}
+.social-icons a:hover { color: var(--primary-color); }
+.footer p { margin-top: 20px; }
+
+/* --- Scroll-to-Top Button (New!) --- */
+#scrollTopBtn {
+    display: none; position: fixed; bottom: 20px; right: 30px;
+    z-index: 100; border: none; outline: none;
+    background-color: var(--primary-color); color: white;
+    cursor: pointer; padding: 15px; border-radius: 10px; font-size: 18px;
+    transition: background-color var(--transition-speed) ease;
+}
+#scrollTopBtn:hover { background-color: #d96d11; }
+
+/* Add the rest of the previous CSS here (article styles, etc.) */
+.post-card:hover { transform: translateY(-8px); box-shadow: 0 10px 25px rgba(0,0,0,0.12); }
+.post-card-image-link { display: block; position: relative; }
+.post-card-image { width: 100%; height: 220px; object-fit: cover; display: block; }
+.post-category { position: absolute; top: 15px; left: 15px; background-color: var(--primary-color); color: var(--light-color); padding: 5px 12px; border-radius: 50px; font-size: 0.8em; font-weight: bold; font-family: 'Montserrat', sans-serif; }
+.post-card-content { padding: 25px; }
+.post-card-content h2 { font-family: 'Montserrat', sans-serif; margin-top: 0; font-size: 1.5em; line-height: 1.4; color: var(--text-dark); }
+.post-card-content p { margin-bottom: 20px; }
+.post-card-content a { text-decoration: none; }
+.read-more-btn { display: inline-block; margin-top: 15px; padding: 10px 20px; background-color: var(--primary-color); color: #fff; text-decoration: none; border-radius: 50px; font-weight: bold; transition: background-color 0.2s ease; }
+.read-more-btn:hover { background-color: #d96d11; }
+.article-title { font-family: 'Montserrat', sans-serif; font-size: 2.5em; color: var(--text-dark); line-height: 1.3; text-align: center; margin-bottom: 30px; }
+.article-body ul { list-style: none; padding-left: 0; }
+.article-body ul li { padding-left: 30px; position: relative; margin-bottom: 10px; }
+.article-body ul li::before { content: '✓'; position: absolute; left: 0; color: var(--primary-color); font-weight: bold; font-size: 1.2em; }
+.call-to-action { display: block; width: fit-content; margin: 40px auto; padding: 18px 35px; background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); color: #fff; text-decoration: none; font-weight: bold; font-family: 'Montserrat', sans-serif; border-radius: 50px; text-align: center; transition: all 0.3s ease; box-shadow: 0 4px 20px rgba(253, 126, 20, 0.4); }
+.call-to-action:hover { transform: translateY(-5px) scale(1.05); box-shadow: 0 8px 25px rgba(253, 126, 20, 0.5); }
