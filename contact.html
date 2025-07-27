@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Unbox Genius</title>
+    <!-- Links to Fonts and CSS (same as above) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Paste the same CSS from the about page here for consistency */
+        :root {
+            --primary-color: #D35400; --secondary-color: #2c3e50; --background-color: #F7F9FC;
+            --surface-color: #FFFFFF; --text-color: #34495e; --light-text-color: #7f8c8d;
+            --border-color: #EAECEE; --transition-speed: 0.3s;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.7; background-color: var(--background-color); color: var(--text-color); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 60px 20px; }
+        h1, h2, h3 { font-family: 'Lora', serif; color: var(--secondary-color); line-height: 1.2; }
+        a { color: var(--primary-color); text-decoration: none; }
+        p { font-size: 1.1em; }
+        /* Header & Footer */
+        .main-header { background-color: var(--surface-color); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--border-color); }
+        .header-content { display: flex; justify-content: space-between; align-items: center; padding: 20px; max-width: 1200px; margin: 0 auto; }
+        .brand-logo a { text-decoration: none; font-family: 'Lora', serif; font-size: 1.8rem; color: var(--secondary-color); }
+        .main-nav a { text-decoration: none; color: var(--text-color); font-weight: 600; margin-left: 25px; transition: color var(--transition-speed); }
+        .main-nav a:hover { color: var(--primary-color); }
+        .main-footer { text-align: center; padding: 50px 20px; border-top: 1px solid var(--border-color); background: var(--surface-color); }
+
+        /* Contact Page Specific Styles */
+        .contact-container { max-width: 700px; padding: 40px 20px; text-align: center; }
+        .contact-container h1 { font-size: 3.5rem; margin-bottom: 20px; }
+        .contact-container p { margin-bottom: 1.5em; color: var(--light-text-color); }
+        .contact-email { font-size: 1.2em; font-weight: 600; }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <div class="brand-logo"><a href="/index.html">Unbox Genius</a></div>
+            <nav class="main-nav">
+                <a href="/index.html">Home</a>
+                <a href="/about.html">About</a>
+                <a href="/contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container contact-container">
+        <h1>Get In Touch</h1>
+        <p>Have a question, a product suggestion, or just want to say hello? We'd love to hear from you. The best way to reach us is by email.</p>
+        <p class="contact-email">
+            Contact us at: <a href="mailto:hello@unboxgenius.com">hello@unboxgenius.com</a>
+        </p>
+    </main>
+    
+    <footer class="main-footer">
+        <p>© 2025 Unbox Genius. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
