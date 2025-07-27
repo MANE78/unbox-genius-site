@@ -1,32 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- ... head content is the same ... -->
-    <title>About Unbox Genius - Our Mission & Promise</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Unbox Genius</title>
+    <!-- Links to Fonts and CSS (same as above) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Paste the same CSS from the review page here for consistency */
+        :root {
+            --primary-color: #D35400; --secondary-color: #2c3e50; --background-color: #F7F9FC;
+            --surface-color: #FFFFFF; --text-color: #34495e; --light-text-color: #7f8c8d;
+            --border-color: #EAECEE; --transition-speed: 0.3s;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.7; background-color: var(--background-color); color: var(--text-color); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 60px 20px; }
+        h1, h2, h3 { font-family: 'Lora', serif; color: var(--secondary-color); line-height: 1.2; }
+        a { color: var(--primary-color); text-decoration: none; }
+        p { font-size: 1.1em; }
+        /* Header & Footer */
+        .main-header { background-color: var(--surface-color); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--border-color); }
+        .header-content { display: flex; justify-content: space-between; align-items: center; padding: 20px; max-width: 1200px; margin: 0 auto; }
+        .brand-logo a { text-decoration: none; font-family: 'Lora', serif; font-size: 1.8rem; color: var(--secondary-color); }
+        .main-nav a { text-decoration: none; color: var(--text-color); font-weight: 600; margin-left: 25px; transition: color var(--transition-speed); }
+        .main-nav a:hover { color: var(--primary-color); }
+        .main-footer { text-align: center; padding: 50px 20px; border-top: 1px solid var(--border-color); background: var(--surface-color); }
+        
+        /* About Page Specific Styles */
+        .about-container { max-width: 800px; padding: 40px 20px; text-align: center; }
+        .about-container h1 { font-size: 3.5rem; margin-bottom: 20px; }
+        .about-container p { margin-bottom: 1.5em; color: var(--light-text-color); }
+        .about-body { text-align: left; margin-top: 40px; }
+        .about-body h3 { font-size: 1.8em; margin-top: 40px; }
+    </style>
 </head>
 <body>
-    <!-- ... header content is the same ... -->
-    <main class="container article-container">
-        <article class="article-body">
-            <h1 class="article-title">We Find The Genius So You Don't Have To.</h1>
-            <p class="article-meta">Our Mission at Unbox Genius</p>
-            
-            <p>The internet is a vast, chaotic ocean of products. Hidden in that ocean are islands of pure genius: gadgets that solve problems you didn't know could be solved, tools that save you precious time, and finds that bring a little spark of joy to your day.</p>
-            <p>But who has the time to navigate that ocean? <strong>We do.</strong></p>
-            
-            <h3>Our Promise: Authenticity and Value</h3>
-            <p>Unbox Genius isn't just another product list. We are your dedicated discovery team. We obsessively hunt for, test, and review items that meet a simple criterion: they must be genuinely smart, surprisingly useful, and offer incredible value.</p>
-            <ul>
-                <li><strong>We Test It:</strong> We get hands-on with these products to see if they live up to the hype.</li>
-                <li><strong>We're Honest:</strong> If something is great, we'll tell you why. If it has flaws, we'll tell you that too.</li>
-                <li><strong>We Respect Your Wallet:</strong> A "genius" find is often an affordable one. We believe smart solutions should be accessible to everyone.</li>
-            </ul>
+    <header class="main-header">
+        <div class="header-content">
+            <div class="brand-logo"><a href="/index.html">Unbox Genius</a></div>
+            <nav class="main-nav">
+                <a href="/index.html">Home</a>
+                <a href="/about.html">About</a>
+                <a href="/contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
 
-            <h3>How We Stay Unbiased (Our Affiliate Disclosure)</h3>
-            <p>To keep our site running and our reviews independent, we use affiliate links. When you purchase through a link on our site, we may earn a small commission at no extra cost to you. This model allows us to dedicate our time to this mission without plastering the site with annoying ads.</p>
-            <p>Your trust is everything. We only recommend products we'd be excited to use ourselves. Thank you for joining us on this journey of discovery.</p>
-        </article>
+    <main class="container about-container">
+        <h1>We Find The Genius So You Don't Have To.</h1>
+        <p>Our mission is to cut through the noise of online shopping and bring you honest reviews of products that are genuinely smart, innovative, and useful.</p>
+        
+        <div class="about-body">
+            <h3>Our Process</h3>
+            <p>The internet is a vast, chaotic ocean of products. We are your discovery team. We obsessively hunt for, test, and review items that meet a simple criterion: they must be genuinely smart, surprisingly useful, and offer incredible value. We get our hands on these products to see if they live up to the hype, so you can shop with complete confidence.</p>
+            
+            <h3>Our Promise to You</h3>
+            <p>Your trust is our most important asset. To keep our reviews independent, we use affiliate links. When you purchase through a link on our site, we may earn a small commission at no extra cost to you. This model allows us to dedicate our time to this mission without plastering the site with annoying ads. We only recommend products we'd be excited to use ourselves. Thank you for being here.</p>
+        </div>
     </main>
-    <!-- ... footer content is the same ... -->
+    
+    <footer class="main-footer">
+        <p>© 2025 Unbox Genius. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
