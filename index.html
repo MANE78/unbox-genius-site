@@ -56,22 +56,22 @@
         .hero-content p { font-size: 1.1rem; color: var(--light-text-color); margin-bottom: 30px; }
         .hero-image img { width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
 
-        /* NEW: Why Trust Us Section */
-        .trust-section { background-color: var(--surface-color); padding-top: 80px; padding-bottom: 80px; }
+        /* Why Trust Us Section */
+        .trust-section { background-color: var(--surface-color); padding-top: 80px; padding-bottom: 80px; border-top: 1px solid var(--border-color); }
         .trust-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
         .trust-card { text-align: center; }
         .trust-card .icon { font-size: 2.5rem; color: var(--primary-color); margin-bottom: 20px; line-height: 1; }
         .trust-card h3 { font-size: 1.5rem; margin-bottom: 10px; }
         .trust-card p { font-size: 1rem; color: var(--light-text-color); }
 
-        /* NEW: Editor's Picks Section */
+        /* Editor's Picks Section */
         .picks-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
         .pick-card { background: var(--surface-color); border: 1px solid var(--border-color); border-radius: 12px; text-align: center; padding: 30px; transition: all var(--transition-speed) ease; }
         .pick-card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(0,0,0,0.08); }
         .pick-card .pick-badge { display: inline-block; background-color: var(--primary-color); color: #fff; padding: 5px 12px; border-radius: 50px; font-size: 0.8rem; font-weight: 700; margin-bottom: 20px; }
         .pick-card img { max-width: 100%; height: 200px; object-fit: contain; margin-bottom: 20px; }
         .pick-card h3 { font-size: 1.4rem; }
-        .pick-card .btn { margin-top: 20px; }
+        .pick-card a.btn { margin-top: 20px; } /* Corrected selector */
         
         /* Newsletter Section */
         .newsletter-cta { background-color: var(--secondary-color); color: #fff; padding: 60px 20px; text-align: center; border-radius: 12px; margin-top: 80px; }
@@ -82,7 +82,7 @@
         .newsletter-form button { padding: 14px 28px; background-color: var(--primary-color); color: #fff; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; }
 
         /* Footer */
-        .main-footer { text-align: center; padding: 50px 20px; border-top: 1px solid var(--border-color); margin-top: 0px; background: var(--surface-color); }
+        .main-footer { text-align: center; padding: 50px 20px; border-top: 1px solid var(--border-color); background: var(--surface-color); }
         .main-footer p { color: var(--light-text-color); }
 
         /* Responsive Adjustments */
@@ -101,29 +101,30 @@
 
     <header class="main-header">
         <div class="header-content">
-            <div class="brand-logo"><a href="#">Unbox Genius</a></div>
+            <div class="brand-logo"><a href="/index.html">Unbox Genius</a></div>
             <nav class="main-nav">
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Contact</a>
+                <a href="/index.html">Home</a>
+                <a href="/about.html">About</a>
+                <a href="/contact.html">Contact</a>
             </nav>
         </div>
     </header>
 
     <main>
+        <!-- Hero Section -->
         <section class="hero">
             <div class="hero-content">
                 <div class="tagline">FEATURED REVIEW</div>
                 <h1>The Tiny Gadget That Makes Stale Snacks History.</h1>
                 <p>We spent a week testing the viral Mini Bag Sealer. Find out why this $3 find is the smartest, most satisfying kitchen hack we've seen this year.</p>
-                <a href="#" class="btn">Read The Full Review</a>
+                <a href="/posts/mini-bag-sealer-review.html" class="btn">Read The Full Review</a>
             </div>
             <div class="hero-image">
                 <img src="https://ae01.alicdn.com/kf/S901ddb5e6fed4f2fb90c63f557acb51cx.jpeg" alt="A hand holding the Mini Bag Sealer over a bag of potato chips." loading="lazy">
             </div>
         </section>
 
-        <!-- NEW: Why Trust Us Section -->
+        <!-- Why Trust Us Section -->
         <section class="trust-section">
             <div class="container">
                 <h2 class="section-title">A New Standard for Reviews</h2>
@@ -148,9 +149,9 @@
             </div>
         </section>
 
-        <!-- NEW: Editor's Picks Section -->
+        <!-- Editor's Picks Section -->
         <section class="container">
-            <h2 class="section-title">Editor's Top Picks for July</h2>
+            <h2 class="section-title">Editor's Top Picks for This Month</h2>
             <p class="section-subtitle">Three standout products our team is obsessed with right now. No fluff, just the best.</p>
             <div class="picks-grid">
                 <!-- Pick 1: Best Overall -->
@@ -159,7 +160,7 @@
                     <img src="https://ae01.alicdn.com/kf/S901ddb5e6fed4f2fb90c63f557acb51cx.jpeg" alt="Mini Bag Sealer" loading="lazy">
                     <h3>The Viral Mini Bag Sealer</h3>
                     <p>The perfect blend of price, performance, and pure satisfaction. A must-have in every kitchen.</p>
-                    <a href="#" class="btn">Check Price</a>
+                    <a href="/posts/mini-bag-sealer-review.html" class="btn">Read Review</a>
                 </div>
                 <!-- Pick 2: Best Value -->
                 <div class="pick-card">
@@ -167,7 +168,7 @@
                     <img src="https://ae01.alicdn.com/kf/Sb42736f2d0644b2a8d54cf58b75a4f64s.jpg_640x640.jpg" alt="Refillable Oil Sprayer" loading="lazy">
                     <h3>Refillable Oil Sprayer</h3>
                     <p>For under $5, this simple tool helps you cook healthier and saves you money. Unbeatable value.</p>
-                    <a href="#" class="btn">Check Price</a>
+                    <a href="#" class="btn">Read Review</a> <!-- Placeholder link -->
                 </div>
                 <!-- Pick 3: Genius Innovation -->
                 <div class="pick-card">
@@ -175,11 +176,12 @@
                     <img src="https://ae01.alicdn.com/kf/S7a5d15a7b01c435a8a1f6a14d5a9b708q/Baseus-A2Pro-Car-Vacuum-Cleaner-6000Pa-Wireless-Vacuum-Cleaner-for-Car-Home-Cleaning-Portable-Handheld-Car.jpg" alt="Portable Car Vacuum" loading="lazy">
                     <h3>Portable Power-Vacuum</h3>
                     <p>Finally, a handheld vacuum that's both powerful and beautifully designed. Cleaning your car is no longer a chore.</p>
-                    <a href="#" class="btn">Check Price</a>
+                    <a href="#" class="btn">Read Review</a> <!-- Placeholder link -->
                 </div>
             </div>
         </section>
 
+        <!-- Newsletter Section -->
         <div class="container">
              <div class="newsletter-cta">
                 <h2>Stay Ahead of the Trends</h2>
