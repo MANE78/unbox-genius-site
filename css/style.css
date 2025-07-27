@@ -141,3 +141,15 @@ body.dark-mode .footer { background-color: #1c1c1c; }
 .article-body ul li::before { content: '✓'; position: absolute; left: 0; color: var(--primary-color); font-weight: bold; font-size: 1.2em; }
 .call-to-action { display: block; width: fit-content; margin: 40px auto; padding: 18px 35px; background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); color: #fff; text-decoration: none; font-weight: bold; font-family: 'Montserrat', sans-serif; border-radius: 50px; text-align: center; transition: all 0.3s ease; box-shadow: 0 4px 20px rgba(253, 126, 20, 0.4); }
 .call-to-action:hover { transform: translateY(-5px) scale(1.05); box-shadow: 0 8px 25px rgba(253, 126, 20, 0.5); }
+/* --- Affiliate Banner Styling --- */
+.ad-banner-container {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.ad-banner-container img {
+    max-width: 100%;
+    height: auto; /* This makes the banner responsive */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
