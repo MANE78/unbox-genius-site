@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Unbox Genius</title>
+    <title>Contact Us - Unbox Genius</title>
     <!-- Links to Fonts and CSS (same as index.html) -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -20,18 +20,17 @@
         body { font-family: 'Inter', sans-serif; line-height: 1.7; background-color: var(--background-color); color: var(--text-color); }
         .container { max-width: 1200px; margin: 0 auto; padding: 60px 20px; }
         h1, h2, h3 { font-family: 'Lora', serif; color: var(--secondary-color); line-height: 1.2; }
-        p { font-size: 1.1em; }
+        a { text-decoration: none; color: var(--primary-color); }
         .main-header { background-color: var(--surface-color); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--border-color); }
         .header-content { display: flex; justify-content: space-between; align-items: center; padding: 20px; max-width: 1200px; margin: 0 auto; }
         .brand-logo a { text-decoration: none; font-family: 'Lora', serif; font-size: 1.8rem; color: var(--secondary-color); }
         .main-nav a { text-decoration: none; color: var(--text-color); font-weight: 600; margin-left: 25px; transition: color var(--transition-speed); }
         .main-nav a:hover { color: var(--primary-color); }
         .main-footer { text-align: center; padding: 50px 20px; border-top: 1px solid var(--border-color); background: var(--surface-color); }
-        .about-container { max-width: 800px; padding: 40px 20px; text-align: center; }
-        .about-container h1 { font-size: 3.5rem; margin-bottom: 20px; }
-        .about-container p.lead { font-size: 1.2rem; margin-bottom: 1.5em; color: var(--light-text-color); }
-        .about-body { text-align: left; margin-top: 40px; }
-        .about-body h3 { font-size: 1.8em; margin-top: 40px; }
+        .contact-container { max-width: 700px; padding: 40px 20px; text-align: center; }
+        .contact-container h1 { font-size: 3.5rem; margin-bottom: 20px; }
+        .contact-container p { font-size: 1.2rem; margin-bottom: 1.5em; color: var(--light-text-color); }
+        .contact-email { font-size: 1.2em; font-weight: 600; }
     </style>
 </head>
 <body>
@@ -47,17 +46,12 @@
         </div>
     </header>
 
-    <main class="container about-container">
-        <h1>We Find The Genius So You Don't Have To.</h1>
-        <p class="lead">Our mission is to cut through the noise of online shopping and bring you honest reviews of products that are genuinely smart, innovative, and useful.</p>
-        
-        <div class="about-body">
-            <h3>Our Process</h3>
-            <p>The internet is a vast, chaotic ocean of products. We are your discovery team. We obsessively hunt for, test, and review items that meet a simple criterion: they must be genuinely smart, surprisingly useful, and offer incredible value. We get our hands on these products to see if they live up to the hype, so you can shop with complete confidence.</p>
-            
-            <h3>Our Promise to You</h3>
-            <p>Your trust is our most important asset. To keep our reviews independent, we use affiliate links. When you purchase through a link on our site, we may earn a small commission at no extra cost to you. This model allows us to dedicate our time to this mission without plastering the site with annoying ads. We only recommend products we'd be excited to use ourselves. Thank you for being here.</p>
-        </div>
+    <main class="container contact-container">
+        <h1>Get In Touch</h1>
+        <p>Have a question, a product suggestion, or just want to say hello? We'd love to hear from you. The best way to reach us is by email.</p>
+        <p class="contact-email">
+            Contact us at: <a href="mailto:hello@unboxgenius.com">hello@unboxgenius.com</a>
+        </p>
     </main>
     
     <footer class="main-footer">
