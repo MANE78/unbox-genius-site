@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Reviews - Unbox Genius</title>
+    <meta name="description" content="Browse all our honest reviews of the latest kitchen gadgets, home hacks, and smart tech finds. Your complete guide to shopping smarter.">
+    
+    <!-- Links to Fonts and CSS (same as other pages) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #D35400; --secondary-color: #2c3e50; --background-color: #F7F9FC;
+            --surface-color: #FFFFFF; --text-color: #34495e; --light-text-color: #7f8c8d;
+            --border-color: #EAECEE; --transition-speed: 0.3s;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.7; background-color: var(--background-color); color: var(--text-color); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 60px 20px; }
+        h1, h2, h3 { font-family: 'Lora', serif; color: var(--secondary-color); line-height: 1.2; }
+        a { color: var(--primary-color); text-decoration: none; }
+        .section-title { text-align: center; font-size: 2.8rem; margin-bottom: 20px; }
+        .section-subtitle { text-align: center; font-size: 1.1rem; color: var(--light-text-color); max-width: 600px; margin: 0 auto 50px; }
+
+        /* Header & Footer */
+        .main-header { background-color: var(--surface-color); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--border-color); }
+        .header-content { display: flex; justify-content: space-between; align-items: center; padding: 20px; max-width: 1200px; margin: 0 auto; }
+        .brand-logo a { text-decoration: none; font-family: 'Lora', serif; font-size: 1.8rem; color: var(--secondary-color); }
+        .main-nav a { text-decoration: none; color: var(--text-color); font-weight: 600; margin-left: 25px; transition: color var(--transition-speed); }
+        .main-nav a:hover { color: var(--primary-color); }
+        .main-footer { text-align: center; padding: 50px 20px; border-top: 1px solid var(--border-color); background: var(--surface-color); }
+        .main-footer p { color: var(--light-text-color); }
+
+        /* Post Grid (reused from homepage) */
+        .post-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .post-card { background: var(--surface-color); border: 1px solid var(--border-color); border-radius: 12px; text-align: center; padding: 30px; transition: all var(--transition-speed) ease; }
+        .post-card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(0,0,0,0.08); }
+        .post-card img { max-width: 100%; height: 200px; object-fit: contain; margin-bottom: 20px; border-radius: 8px; }
+        .post-card h3 { font-size: 1.4rem; }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <div class="brand-logo"><a href="/index.html">Unbox Genius</a></div>
+            <nav class="main-nav">
+                <a href="/index.html">Home</a>
+                <a href="/reviews.html">All Reviews</a>
+                <a href="/about.html">About</a>
+                <a href="/contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1 class="section-title">All Genius Reviews</h1>
+        <p class="section-subtitle">Browse our complete library of tested and reviewed products. Your guide to the smartest gadgets on the internet.</p>
+        
+        <div class="post-grid">
+            <!-- Review 1: Mini Bag Sealer -->
+            <div class="post-card">
+                <a href="/posts/mini-bag-sealer-review.html">
+                    <img src="https://ae01.alicdn.com/kf/S901ddb5e6fed4f2fb90c63f557acb51cx.jpeg" alt="Mini Bag Sealer" loading="lazy">
+                    <h3>The Viral Mini Bag Sealer</h3>
+                </a>
+            </div>
+            <!-- Review 2: Oil Sprayer -->
+            <div class="post-card">
+                <a href="#"> <!-- Placeholder link -->
+                    <img src="https://ae01.alicdn.com/kf/Sb42736f2d0644b2a8d54cf58b75a4f64s.jpg_640x640.jpg" alt="Refillable Oil Sprayer" loading="lazy">
+                    <h3>Refillable Oil Sprayer</h3>
+                </a>
+            </div>
+            <!-- Review 3: Car Vacuum -->
+            <div class="post-card">
+                 <a href="#"> <!-- Placeholder link -->
+                    <img src="https://ae01.alicdn.com/kf/S7a5d15a7b01c435a8a1f6a14d5a9b708q/Baseus-A2Pro-Car-Vacuum-Cleaner-6000Pa-Wireless-Vacuum-Cleaner-for-Car-Home-Cleaning-Portable-Handheld-Car.jpg" alt="Portable Car Vacuum" loading="lazy">
+                    <h3>Portable Power-Vacuum</h3>
+                </a>
+            </div>
+            <!-- Add future reviews here -->
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>© 2025 Unbox Genius. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
