@@ -6,86 +6,59 @@
     <meta name="description" content="We discover and review the most ingenious viral gadgets you never knew you needed. Honest reviews on kitchen hacks, home automation, and smart travel gear.">
     <title>Unbox Genius - Your Guide to Genuinely Smart Gadgets</title>
     
-    <!-- Google Fonts: Lora for headings, Inter for body text -->
+    <!-- Google Fonts & Font Awesome -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
+        /* All CSS from v8.0 goes here. It is identical to the CSS in the other pages. */
         :root {
-            --primary-color: #D35400; /* Burnt Orange for CTA */
-            --secondary-color: #2c3e50; /* Deep Blue for headings/accents */
-            --background-color: #F7F9FC;
-            --surface-color: #FFFFFF;
-            --text-color: #34495e;
-            --light-text-color: #7f8c8d;
-            --border-color: #EAECEE;
-            --transition-speed: 0.3s;
+            --primary-color: #D35400; --secondary-color: #2c3e50; --background-color: #F7F9FC;
+            --surface-color: #FFFFFF; --text-color: #34495e; --light-text-color: #7f8c8d;
+            --border-color: #EAECEE; --transition-speed: 0.3s;
         }
-
         * { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; }
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.7;
-            background-color: var(--background-color);
-            color: var(--text-color);
-        }
-
+        body { font-family: 'Inter', sans-serif; line-height: 1.7; background-color: var(--background-color); color: var(--text-color); }
         .container { max-width: 1200px; margin: 0 auto; padding: 80px 20px; }
         .btn { display: inline-block; padding: 14px 28px; background-color: var(--primary-color); color: #fff; text-decoration: none; border-radius: 8px; font-weight: 700; transition: all var(--transition-speed) ease; }
         .btn:hover { background-color: #a04000; transform: translateY(-3px); box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
         h1, h2, h3 { font-family: 'Lora', serif; color: var(--secondary-color); line-height: 1.2; }
         .section-title { text-align: center; font-size: 2.8rem; margin-bottom: 50px; }
         .section-subtitle { text-align: center; font-size: 1.1rem; color: var(--light-text-color); max-width: 600px; margin: -40px auto 50px; }
-
-        /* Header */
         .main-header { background-color: var(--surface-color); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--border-color); }
         .header-content { display: flex; justify-content: space-between; align-items: center; padding: 20px; max-width: 1200px; margin: 0 auto; }
         .brand-logo a { text-decoration: none; font-family: 'Lora', serif; font-size: 1.8rem; color: var(--secondary-color); }
         .main-nav a { text-decoration: none; color: var(--text-color); font-weight: 600; margin-left: 25px; transition: color var(--transition-speed); }
         .main-nav a:hover { color: var(--primary-color); }
-        
-        /* Hero Section */
         .hero { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 50px; padding: 60px 20px; background: var(--surface-color); }
         .hero-content .tagline { color: var(--primary-color); font-weight: 700; margin-bottom: 15px; }
         .hero-content h1 { font-size: 3.5rem; margin-bottom: 20px; }
         .hero-content p { font-size: 1.1rem; color: var(--light-text-color); margin-bottom: 30px; }
         .hero-image img { width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-
-        /* Why Trust Us Section */
         .trust-section { background-color: var(--surface-color); padding-top: 80px; padding-bottom: 80px; border-top: 1px solid var(--border-color); }
         .trust-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
         .trust-card { text-align: center; }
         .trust-card .icon { font-size: 2.5rem; color: var(--primary-color); margin-bottom: 20px; line-height: 1; }
         .trust-card h3 { font-size: 1.5rem; margin-bottom: 10px; }
         .trust-card p { font-size: 1rem; color: var(--light-text-color); }
-
-        /* Editor's Picks Section */
         .picks-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
         .pick-card { background: var(--surface-color); border: 1px solid var(--border-color); border-radius: 12px; text-align: center; padding: 30px; transition: all var(--transition-speed) ease; }
         .pick-card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(0,0,0,0.08); }
         .pick-card .pick-badge { display: inline-block; background-color: var(--primary-color); color: #fff; padding: 5px 12px; border-radius: 50px; font-size: 0.8rem; font-weight: 700; margin-bottom: 20px; }
         .pick-card img { max-width: 100%; height: 200px; object-fit: contain; margin-bottom: 20px; }
         .pick-card h3 { font-size: 1.4rem; }
-        .pick-card a.btn { margin-top: 20px; } /* Corrected selector */
-        
-        /* Newsletter Section */
+        .pick-card a.btn { margin-top: 20px; }
         .newsletter-cta { background-color: var(--secondary-color); color: #fff; padding: 60px 20px; text-align: center; border-radius: 12px; margin-top: 80px; }
         .newsletter-cta h2 { font-size: 2.5rem; color: #fff; }
         .newsletter-cta p { color: rgba(255,255,255,0.8); margin: 15px auto 30px; max-width: 500px; }
         .newsletter-form { display: flex; justify-content: center; gap: 10px; }
         .newsletter-form input { padding: 14px; border: none; border-radius: 8px; width: 300px; font-size: 1rem; }
         .newsletter-form button { padding: 14px 28px; background-color: var(--primary-color); color: #fff; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; }
-
-        /* Footer */
         .main-footer { text-align: center; padding: 50px 20px; border-top: 1px solid var(--border-color); background: var(--surface-color); }
         .main-footer p { color: var(--light-text-color); }
-
-        /* Responsive Adjustments */
         @media (max-width: 900px) {
             .hero { grid-template-columns: 1fr; text-align: center; }
             .hero-image { order: -1; margin-bottom: 30px; }
@@ -94,6 +67,7 @@
         @media (max-width: 768px) {
             .newsletter-form { flex-direction: column; align-items: center; }
             .newsletter-form input { width: 100%; max-width: 400px; }
+            .main-nav { display: none; } /* Simplified for this version, will add hamburger menu in next upgrade */
         }
     </style>
 </head>
@@ -104,6 +78,7 @@
             <div class="brand-logo"><a href="/index.html">Unbox Genius</a></div>
             <nav class="main-nav">
                 <a href="/index.html">Home</a>
+                <a href="/reviews.html">All Reviews</a>
                 <a href="/about.html">About</a>
                 <a href="/contact.html">Contact</a>
             </nav>
@@ -154,7 +129,7 @@
             <h2 class="section-title">Editor's Top Picks for This Month</h2>
             <p class="section-subtitle">Three standout products our team is obsessed with right now. No fluff, just the best.</p>
             <div class="picks-grid">
-                <!-- Pick 1: Best Overall -->
+                <!-- Pick 1 -->
                 <div class="pick-card">
                     <div class="pick-badge">BEST OVERALL</div>
                     <img src="https://ae01.alicdn.com/kf/S901ddb5e6fed4f2fb90c63f557acb51cx.jpeg" alt="Mini Bag Sealer" loading="lazy">
@@ -162,21 +137,21 @@
                     <p>The perfect blend of price, performance, and pure satisfaction. A must-have in every kitchen.</p>
                     <a href="/posts/mini-bag-sealer-review.html" class="btn">Read Review</a>
                 </div>
-                <!-- Pick 2: Best Value -->
+                <!-- Pick 2 -->
                 <div class="pick-card">
                     <div class="pick-badge">BEST VALUE</div>
                     <img src="https://ae01.alicdn.com/kf/Sb42736f2d0644b2a8d54cf58b75a4f64s.jpg_640x640.jpg" alt="Refillable Oil Sprayer" loading="lazy">
                     <h3>Refillable Oil Sprayer</h3>
                     <p>For under $5, this simple tool helps you cook healthier and saves you money. Unbeatable value.</p>
-                    <a href="#" class="btn">Read Review</a> <!-- Placeholder link -->
+                    <a href="#" class="btn">Read Review</a>
                 </div>
-                <!-- Pick 3: Genius Innovation -->
+                <!-- Pick 3 -->
                 <div class="pick-card">
                     <div class="pick-badge">GENIUS INNOVATION</div>
                     <img src="https://ae01.alicdn.com/kf/S7a5d15a7b01c435a8a1f6a14d5a9b708q/Baseus-A2Pro-Car-Vacuum-Cleaner-6000Pa-Wireless-Vacuum-Cleaner-for-Car-Home-Cleaning-Portable-Handheld-Car.jpg" alt="Portable Car Vacuum" loading="lazy">
                     <h3>Portable Power-Vacuum</h3>
                     <p>Finally, a handheld vacuum that's both powerful and beautifully designed. Cleaning your car is no longer a chore.</p>
-                    <a href="#" class="btn">Read Review</a> <!-- Placeholder link -->
+                    <a href="#" class="btn">Read Review</a>
                 </div>
             </div>
         </section>
