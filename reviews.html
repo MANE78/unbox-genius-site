@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Reviews - Unbox Genius</title>
     <meta name="description" content="Browse all our honest reviews of the latest kitchen gadgets, home hacks, and smart tech finds. Your complete guide to shopping smarter.">
-    <!-- Links to Fonts and CSS (same as index.html) -->
+    <!-- Links to Fonts and CSS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* All CSS from v8.0 goes here. It is identical to index.html */
+        /* This contains the full v8.0 CSS */
         :root {
             --primary-color: #D35400; --secondary-color: #2c3e50; --background-color: #F7F9FC;
             --surface-color: #FFFFFF; --text-color: #34495e; --light-text-color: #7f8c8d;
@@ -20,8 +20,6 @@
         html { scroll-behavior: smooth; }
         body { font-family: 'Inter', sans-serif; line-height: 1.7; background-color: var(--background-color); color: var(--text-color); }
         .container { max-width: 1200px; margin: 0 auto; padding: 60px 20px; }
-        .btn { display: inline-block; padding: 14px 28px; background-color: var(--primary-color); color: #fff; text-decoration: none; border-radius: 8px; font-weight: 700; transition: all var(--transition-speed) ease; }
-        .btn:hover { background-color: #a04000; transform: translateY(-3px); box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
         h1, h2, h3 { font-family: 'Lora', serif; color: var(--secondary-color); line-height: 1.2; }
         a { text-decoration: none; color: var(--primary-color); }
         .section-title { text-align: center; font-size: 2.8rem; margin-bottom: 20px; }
@@ -34,12 +32,13 @@
         .main-footer { text-align: center; padding: 50px 20px; border-top: 1px solid var(--border-color); background: var(--surface-color); }
         .main-footer p { color: var(--light-text-color); }
         .post-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-        .post-card { background: var(--surface-color); border-radius: 12px; box-shadow: 0 5px 25px rgba(44, 62, 80, 0.07); overflow: hidden; transition: all var(--transition-speed) ease; }
-        .post-card:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(44, 62, 80, 0.1); }
-        .post-card img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
+        .post-card { background: var(--surface-color); border: 1px solid var(--border-color); border-radius: 12px; transition: all var(--transition-speed) ease; }
+        .post-card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(0,0,0,0.08); }
+        .post-card img { width: 100%; aspect-ratio: 16/10; object-fit: cover; border-top-left-radius: 12px; border-top-right-radius: 12px; }
         .card-content { padding: 25px; }
-        .card-content h3 { font-size: 1.4rem; margin-bottom: 10px; }
+        .card-content h3 { font-size: 1.4rem; }
         .card-content a { text-decoration: none; color: var(--secondary-color); }
+        .card-content a:hover h3 { color: var(--primary-color); }
     </style>
 </head>
 <body>
@@ -60,26 +59,41 @@
         <p class="section-subtitle">Browse our complete library of tested and reviewed products. Your guide to the smartest gadgets on the internet.</p>
         
         <div class="post-grid">
-            <!-- Review 1: Mini Bag Sealer -->
+            <!-- NEW: Vegetable Chopper -->
             <article class="post-card">
-                <a href="/posts/mini-bag-sealer-review.html"><img src="https://ae01.alicdn.com/kf/S901ddb5e6fed4f2fb90c63f557acb51cx.jpeg" alt="Mini Bag Sealer" loading="lazy"></a>
-                <div class="card-content">
-                    <a href="/posts/mini-bag-sealer-review.html"><h3>The Viral Mini Bag Sealer</h3></a>
-                </div>
+                <a href="/posts/vegetable-chopper-review.html">
+                    <img src="https://ae01.alicdn.com/kf/Sa425090cb07449a082a0881be8ef86ccA.jpg" alt="A multi-functional vegetable chopper" loading="lazy">
+                    <div class="card-content">
+                        <h3>The $15 Gadget That Chops Onions in 3 Seconds</h3>
+                    </div>
+                </a>
             </article>
-            <!-- Review 2: Oil Sprayer -->
+            <!-- Mini Bag Sealer -->
             <article class="post-card">
-                <a href="#"><img src="https://ae01.alicdn.com/kf/Sb42736f2d0644b2a8d54cf58b75a4f64s.jpg_640x640.jpg" alt="Refillable Oil Sprayer" loading="lazy"></a>
-                <div class="card-content">
-                    <a href="#"><h3>Refillable Oil Sprayer</h3></a>
-                </div>
+                <a href="/posts/mini-bag-sealer-review.html">
+                    <img src="https://ae01.alicdn.com/kf/S901ddb5e6fed4f2fb90c63f557acb51cx.jpeg" alt="Mini Bag Sealer" loading="lazy">
+                    <div class="card-content">
+                        <h3>The Viral Mini Bag Sealer</h3>
+                    </div>
+                </a>
             </article>
-            <!-- Review 3: Car Vacuum -->
+            <!-- Oil Sprayer -->
             <article class="post-card">
-                 <a href="#"><img src="https://ae01.alicdn.com/kf/S7a5d15a7b01c435a8a1f6a14d5a9b708q/Baseus-A2Pro-Car-Vacuum-Cleaner-6000Pa-Wireless-Vacuum-Cleaner-for-Car-Home-Cleaning-Portable-Handheld-Car.jpg" alt="Portable Car Vacuum" loading="lazy"></a>
-                <div class="card-content">
-                    <a href="#"><h3>Portable Power-Vacuum</h3></a>
-                </div>
+                <a href="#">
+                    <img src="https://ae01.alicdn.com/kf/Sb42736f2d0644b2a8d54cf58b75a4f64s.jpg_640x640.jpg" alt="Refillable Oil Sprayer" loading="lazy">
+                    <div class="card-content">
+                        <h3>Refillable Oil Sprayer</h3>
+                    </div>
+                </a>
+            </article>
+            <!-- Car Vacuum -->
+            <article class="post-card">
+                 <a href="#">
+                    <img src="https://ae01.alicdn.com/kf/S7a5d15a7b01c435a8a1f6a14d5a9b708q/Baseus-A2Pro-Car-Vacuum-Cleaner-6000Pa-Wireless-Vacuum-Cleaner-for-Car-Home-Cleaning-Portable-Handheld-Car.jpg" alt="Portable Car Vacuum" loading="lazy">
+                    <div class="card-content">
+                        <h3>Portable Power-Vacuum</h3>
+                    </div>
+                </a>
             </article>
             <!-- Add future reviews here -->
         </div>
