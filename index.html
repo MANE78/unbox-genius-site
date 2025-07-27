@@ -6,55 +6,45 @@
     <meta name="description" content="Discover genius gadgets and viral finds from AliExpress. Unbox Genius brings you honest reviews of the best home and kitchen hacks.">
     <title>Unbox Genius - Viral Gadgets You Didn't Know You Needed</title>
     <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome CDN for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
     <header class="main-header">
         <div class="header-content">
-            <div class="brand-logo">
-                <a href="index.html"><h1>Unbox Genius</h1></a>
-            </div>
+            <div class="brand-logo"><a href="index.html"><h1>Unbox Genius</h1></a></div>
             <nav class="navbar">
                 <a href="index.html">Home</a>
-                <a href="#">About</a>
+                <div class="nav-item">
+                    <a href="#">Categories <i class="fa-solid fa-chevron-down fa-xs"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="#">Kitchen Hacks</a></li>
+                        <li><a href="#">Home Gadgets</a></li>
+                        <li><a href="#">Tech Finds</a></li>
+                    </ul>
+                </div>
+                <a href="about.html">About</a>
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search articles...">
+                </div>
                 <button id="theme-toggler">🌙</button>
             </nav>
         </div>
     </header>
 
     <section class="hero">
-        <h2>Article of the Week</h2>
-        <p>This simple $5 kitchen gadget is a total game-changer for healthier cooking. Discover why everyone is obsessed with it.</p>
-        <a href="posts/oil-sprayer-review.html" class="hero-btn">Read The Review Now</a>
+        <h2>Gadget of the Week</h2>
+        <p>This tiny $3 gadget creates a perfect airtight seal on any bag. Discover why it's our new favorite kitchen hack for keeping food fresh.</p>
+        <a href="posts/mini-bag-sealer-review.html" class="hero-btn">Read The Review Now</a>
     </section>
 
     <main class="container">
         <div class="post-grid">
-            <article class="post-card">
-                <!-- ... content of post card is the same ... -->
-            </article>
-        </div>
-    </main>
-
-    <footer class="footer">
-        <div class="social-icons">
-            <a href="#" target="_blank">X</a>
-            <a href="#" target="_blank">Instagram</a>
-            <a href="#" target="_blank">TikTok</a>
-        </div>
-        <p>© 2025 Unbox Genius. Your source for the smartest finds.</p>
-    </footer>
-
-    <button id="scrollTopBtn" title="Go to top">↑</button>
-
-    <script src="js/main.js"></script>
-</body>
-</html>
             <!-- Blog Post Card 2: Mini Bag Sealer -->
             <article class="post-card">
                 <a href="posts/mini-bag-sealer-review.html" class="post-card-image-link">
                     <div class="post-category">Kitchen Hack</div>
-                    <!-- الرابط والصورة المدمجة -->
                     <img class="post-card-image" src="https://ae01.alicdn.com/kf/S901ddb5e6fed4f2fb90c63f557acb51cx.jpeg" alt="Mini Bag Sealer sealing a bag of chips">
                 </a>
                 <div class="post-card-content">
@@ -65,3 +55,34 @@
                     <a href="posts/mini-bag-sealer-review.html" class="read-more-btn">Read The Review</a>
                 </div>
             </article>
+
+            <!-- Blog Post Card 1: Oil Sprayer -->
+            <article class="post-card">
+                <a href="posts/oil-sprayer-review.html" class="post-card-image-link">
+                    <div class="post-category">Kitchen Gadget</div>
+                    <img class="post-card-image" src="https://ae01.alicdn.com/kf/Sb42736f2d0644b2a8d54cf58b75a4f64s.jpg_640x640.jpg" alt="Refillable Oil Sprayer">
+                </a>
+                <div class="post-card-content">
+                    <a href="posts/oil-sprayer-review.html">
+                        <h2>This $5 Kitchen Gadget from AliExpress Is a Genius Hack for Healthier Cooking</h2>
+                    </a>
+                    <p>Let's be honest. How many times have you tried to lightly coat a pan with oil, only to accidentally pour a giant puddle? This simple tool is a game-changer...</p>
+                    <a href="posts/oil-sprayer-review.html" class="read-more-btn">Read The Review</a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="social-icons">
+            <a href="#" target="_blank" title="X/Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" target="_blank" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+        <p>© 2025 Unbox Genius. Your source for the smartest finds.</p>
+    </footer>
+
+    <button id="scrollTopBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+    <script src="js/main.js"></script>
+</body>
+</html>
