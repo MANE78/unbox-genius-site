@@ -5,19 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Learn about the mission of Unbox Genius. We find, test, and review the most innovative and useful gadgets to make your life easier.">
     <title>About Unbox Genius</title>
-    
-    <!-- Link to Central Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome CDN for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
     <header class="main-header">
         <div class="header-content">
-            <div class="brand-logo">
-                <a href="index.html"><h1>Unbox Genius</h1></a>
-            </div>
+            <div class="brand-logo"><a href="index.html"><h1>Unbox Genius</h1></a></div>
             <nav class="navbar">
                 <a href="index.html">Home</a>
+                <div class="nav-item">
+                    <a href="#">Categories <i class="fa-solid fa-chevron-down fa-xs"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="#">Kitchen Hacks</a></li>
+                        <li><a href="#">Home Gadgets</a></li>
+                        <li><a href="#">Tech Finds</a></li>
+                    </ul>
+                </div>
                 <a href="about.html">About</a>
                 <button id="theme-toggler">🌙</button>
             </nav>
@@ -27,11 +33,8 @@
     <main class="container">
         <article class="article-body">
             <h2 class="article-title">Our Mission: Find the Genius in the Everyday</h2>
-            
             <p>Have you ever felt overwhelmed by the endless sea of products online? Scrolling through pages of items that all look the same, wondering what actually works and what's just clever marketing? We've been there too.</p>
-            
             <p><strong>Unbox Genius was born from a simple obsession:</strong> finding those hidden gems. The clever gadgets, the innovative tools, and the surprisingly useful products that solve real-life problems and make you think, "Why didn't I have this sooner?"</p>
-
             <h3>What We Do</h3>
             <p>We are a small team of tech enthusiasts and everyday problem-solvers who spend our time digging through sites like AliExpress and Amazon. We're not looking for the most expensive or the most hyped-up products. We're looking for the most <strong>ingenious</strong>.</p>
             <p>Our promise to you is simple:</p>
@@ -40,27 +43,23 @@
                 <li><strong>A Focus on Value:</strong> A "genius" product doesn't have to be expensive. We celebrate smart design and affordability.</li>
                 <li><strong>Saving You Time:</strong> Let us do the searching so you can spend more time enjoying the best finds.</li>
             </ul>
-
             <h3>Our Affiliate Disclosure (The Honest Bit)</h3>
             <p>To keep this site running and fund our product testing, we participate in affiliate marketing programs. This means that if you click on a product link and make a purchase, we may earn a small commission at <strong>no extra cost to you</strong>. This is how we support our work while keeping our content free for you.</p>
             <p>We only recommend products we genuinely believe are "genius" and would use ourselves. Your trust is our most important asset, and we're committed to being transparent about how we operate.</p>
             <p>Thank you for being here. Now, let's go find something brilliant!</p>
-
         </article>
     </main>
 
     <footer class="footer">
         <div class="social-icons">
-            <a href="#" target="_blank" title="X/Twitter">X</a>
-            <a href="#" target="_blank" title="Instagram">Instagram</a>
-            <a href="#" target="_blank" title="TikTok">TikTok</a>
+            <a href="#" target="_blank" title="X/Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" target="_blank" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
         </div>
         <p>© 2025 Unbox Genius. Your source for the smartest finds.</p>
     </footer>
 
-    <button id="scrollTopBtn" title="Go to top">↑</button>
-
-    <!-- JS file is in the root js/ folder -->
+    <button id="scrollTopBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
     <script src="js/main.js"></script>
 </body>
 </html>
